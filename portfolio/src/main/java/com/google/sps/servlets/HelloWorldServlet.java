@@ -25,7 +25,7 @@ public class HelloWorldServlet extends HttpServlet {
     messages.add("My friend!");
 
     Random rand = new Random();
-    int i = rand.nextInt(4);
+    int i = rand.nextInt(messages.size());
     String json = convertToJson(messages.get(i));
     
     response.setContentType("application/json;");
